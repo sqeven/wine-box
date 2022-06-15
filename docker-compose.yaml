@@ -1,0 +1,12 @@
+version: "3.3"
+
+services:
+    wine-box:
+        image: "sqeven/wine-box:latest"
+        restart: unless-stopped
+        container_name: "wine-box"
+        ports:
+            - "8080:8080"
+        volumes:
+            - "/home/bread/external:/home/app/external"
+        tty: true
